@@ -8,11 +8,12 @@ const uploadFile = async (file) => {
     const formdata = new FormData();
     formdata.append("file", file);
     formdata.append("filename", file.name);
-    const response = await fetch("http://localhost:5000/", {
+    const response = await fetch("http://localhost:5000/mabroor", {
       method: "POST",
       body: formdata,
     });
-    console.log(response);
+    const res = await response.json()
+    console.log(res)
   } catch (e) {
     console.log(e);
   }
