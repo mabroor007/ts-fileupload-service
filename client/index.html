@@ -1,16 +1,23 @@
 <html>
-
   <head>
     <title>File project</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <label id="upload-btn">
       <!--<input type="file" multiple accept="video/*"/>-->
       Upload
-      <input type="file" multiple  style="display: none;"/>
+      <input type="file" multiple style="display: none;" />
     </label>
-    <script src="upload.js"></script>
+    <label>
+      Progress:
+      <span id="progress"></span>
+    </label>
+    <script defer src="upload.js"></script>
   </body>
-
 </html>
